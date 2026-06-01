@@ -7,6 +7,7 @@ func Run() *gin.Engine {
 	InitLogger()
 	InitMysql()
 	InitMySqlC()
+	InitServiceInterface()
 	InitRedis()
 	InitKafka()
 

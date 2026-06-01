@@ -1,6 +1,7 @@
 package user
 
 import (
+	"github.com/dictuantranit/go-ecommerce-backend-api/internal/controller/account"
 	"github.com/dictuantranit/go-ecommerce-backend-api/internal/wire"
 	"github.com/gin-gonic/gin"
 )
@@ -14,13 +15,14 @@ func (pr *UserRouter) InitUserRouter(Router *gin.RouterGroup) {
 	userRouterPublic := Router.Group("/user")
 	{
 		userRouterPublic.POST("/register", userController.Register)
+		userRouterPublic.POST("/login", account.Login.Login)
 		userRouterPublic.POST("/otp")
 	}
 
 	// private router
 	userRouterPrivate := Router.Group("/user")
 	{
-		userRouterPrivate.GET("/get_info")
+		userRouterPrivate.GET("/get_info", userController.Register)
 	}
 
 }
