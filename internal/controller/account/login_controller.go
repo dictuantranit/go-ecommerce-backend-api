@@ -21,3 +21,7 @@ func (c *cUserLogin) Login(ctx *gin.Context) {
 	response.SuccessResponse(ctx, response.ErrCodeSuccess, nil)
 
 }
+
+func (c *cUserLogin) Register(ctx *gin.Context) {
+	var params 
+}

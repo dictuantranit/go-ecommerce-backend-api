@@ -1,12 +1,16 @@
 package service
 
-import "context"
+import (
+	"context"
+
+	"github.com/dictuantranit/go-ecommerce-backend-api/internal/model"
+)
 
 type (
 	//.. interface
 	IUserLogin interface {
 		Login(ctx context.Context) error
-		Register(ctx context.Context) error
+		Register(ctx context.Context, in *model.RegisterInput) (codeResult int, err error)
 		VerifyOTP(ctx context.Context) error
 		UpdatePasswordRegister(ctx context.Context) error
 	}
