@@ -79,3 +79,33 @@
 {"level":"INFO","time":"2026-06-01T10:57:51.091+0700","caller":"initialize/mysql.go:29","msg":"Initializing MySql Successfully"}
 {"level":"INFO","time":"2026-06-01T10:57:51.384+0700","caller":"initialize/mysqlc.go:18","msg":"Initializing MySQL Successfully sql"}
 {"level":"INFO","time":"2026-06-01T10:57:51.396+0700","caller":"initialize/redis.go:46","msg":"value score is::","score":"100"}
+{"level":"INFO","time":"2026-06-01T16:36:09.683+0700","caller":"initialize/mysql.go:29","msg":"Initializing MySql Successfully"}
+{"level":"INFO","time":"2026-06-01T16:36:10.025+0700","caller":"initialize/mysqlc.go:18","msg":"Initializing MySQL Successfully sql"}
+{"level":"INFO","time":"2026-06-01T16:36:10.043+0700","caller":"initialize/redis.go:46","msg":"value score is::","score":"100"}
+{"level":"INFO","time":"2026-06-01T16:37:00.704+0700","caller":"initialize/mysql.go:29","msg":"Initializing MySql Successfully"}
+{"level":"INFO","time":"2026-06-01T16:37:00.931+0700","caller":"initialize/mysqlc.go:18","msg":"Initializing MySQL Successfully sql"}
+{"level":"INFO","time":"2026-06-01T16:37:00.942+0700","caller":"initialize/redis.go:46","msg":"value score is::","score":"100"}
+{"level":"INFO","time":"2026-06-01T22:01:58.689+0700","caller":"initialize/mysql.go:29","msg":"Initializing MySql Successfully"}
+{"level":"INFO","time":"2026-06-01T22:01:59.077+0700","caller":"initialize/mysqlc.go:18","msg":"Initializing MySQL Successfully sql"}
+{"level":"INFO","time":"2026-06-01T22:01:59.096+0700","caller":"initialize/redis.go:46","msg":"value score is::","score":"100"}
+{"level":"INFO","time":"2026-06-03T15:44:31.814+0700","caller":"initialize/mysql.go:29","msg":"Initializing MySql Successfully"}
+{"level":"INFO","time":"2026-06-03T15:44:32.117+0700","caller":"initialize/mysqlc.go:18","msg":"Initializing MySQL Successfully sql"}
+{"level":"INFO","time":"2026-06-03T15:44:32.134+0700","caller":"initialize/redis.go:46","msg":"value score is::","score":"100"}
+{"level":"INFO","time":"2026-06-03T16:07:22.462+0700","caller":"initialize/mysql.go:29","msg":"Initializing MySql Successfully"}
+{"level":"INFO","time":"2026-06-03T16:07:22.728+0700","caller":"initialize/mysqlc.go:18","msg":"Initializing MySQL Successfully sql"}
+{"level":"INFO","time":"2026-06-03T16:07:22.741+0700","caller":"initialize/redis.go:46","msg":"value score is::","score":"100"}
+{"level":"INFO","time":"2026-06-03T20:47:55.026+0700","caller":"initialize/mysql.go:29","msg":"Initializing MySql Successfully"}
+{"level":"INFO","time":"2026-06-03T20:47:55.465+0700","caller":"initialize/mysqlc.go:18","msg":"Initializing MySQL Successfully sql"}
+{"level":"INFO","time":"2026-06-03T20:47:55.483+0700","caller":"initialize/redis.go:46","msg":"value score is::","score":"100"}
+{"level":"INFO","time":"2026-06-03T21:50:26.772+0700","caller":"initialize/mysql.go:29","msg":"Initializing MySql Successfully"}
+{"level":"INFO","time":"2026-06-03T21:50:27.023+0700","caller":"initialize/mysqlc.go:18","msg":"Initializing MySQL Successfully sql"}
+{"level":"INFO","time":"2026-06-03T21:50:27.034+0700","caller":"initialize/redis.go:46","msg":"value score is::","score":"100"}
+{"level":"INFO","time":"2026-06-03T22:21:36.994+0700","caller":"initialize/mysql.go:29","msg":"Initializing MySql Successfully"}
+{"level":"INFO","time":"2026-06-03T22:21:37.270+0700","caller":"initialize/mysqlc.go:18","msg":"Initializing MySQL Successfully sql"}
+{"level":"INFO","time":"2026-06-03T22:21:37.286+0700","caller":"initialize/redis.go:46","msg":"value score is::","score":"100"}
+{"level":"INFO","time":"2026-06-03T22:24:02.288+0700","caller":"initialize/mysql.go:29","msg":"Initializing MySql Successfully"}
+{"level":"INFO","time":"2026-06-03T22:24:02.532+0700","caller":"initialize/mysqlc.go:18","msg":"Initializing MySQL Successfully sql"}
+{"level":"INFO","time":"2026-06-03T22:24:02.543+0700","caller":"initialize/redis.go:46","msg":"value score is::","score":"100"}
+{"level":"INFO","time":"2026-06-03T22:25:26.791+0700","caller":"initialize/mysql.go:29","msg":"Initializing MySql Successfully"}
+{"level":"INFO","time":"2026-06-03T22:25:27.048+0700","caller":"initialize/mysqlc.go:18","msg":"Initializing MySQL Successfully sql"}
+{"level":"INFO","time":"2026-06-03T22:25:27.059+0700","caller":"initialize/redis.go:46","msg":"value score is::","score":"100"}

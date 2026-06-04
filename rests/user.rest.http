@@ -5,6 +5,7 @@ POST {{baseUrl}}/user/register
 Content-type: application/json
 
 {
-    "email": "dictuantran.it@gmail.com",
-    "purpose": "test"
-}
+    "verify_key": "dictuantran.it@gmail.com",
+    "verify_purpose": "TEST_USER",
+    "verify_type": 1
+} 

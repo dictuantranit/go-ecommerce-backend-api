@@ -37,6 +37,9 @@ resetse:
 sqlgen:
 	@"$(USERPROFILE)\go\bin\sqlc.exe" generate
 
+swag:
+	swag init -g .\cmd\server\main.go -o .\cmd\swag\docs
+
 .PHONY: run downse upse resetse
 
 .PHONY: air

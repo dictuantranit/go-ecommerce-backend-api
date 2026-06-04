@@ -12,6 +12,5 @@ func Run() *gin.Engine {
 	InitKafka()
 
 	r := InitRouter()
-	r.Run(":8002")
 	return r
 }
