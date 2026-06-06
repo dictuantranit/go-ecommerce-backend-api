@@ -6,9 +6,31 @@ import (
 	_ "github.com/dictuantranit/go-ecommerce-backend-api/cmd/swag/docs"
 	"github.com/dictuantranit/go-ecommerce-backend-api/internal/initialize"
 	"github.com/gin-gonic/gin"
+	"github.com/prometheus/client_golang/prometheus"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 )
+
+var pingCounter = prometheus.NewCounter(
+	prometheus.CounterOpts{
+		Name: "ping_request_count_total",
+		Help: "Total number of ping requests.",
+	},
+)
+
+func Pong(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		"message": "pong...ping",
+	})
+}
+
+func ping(c *gin.Context) {
+	pingCounter.Inc() // 1 2 3
+	c.JSON(http.StatusOK, gin.H{
+		"status": "OK",
+	})
+}
 
 // @title           API Documentation Ecommerce Backend SHOPDEVGO
 // @version         1.0.0
@@ -27,12 +49,11 @@ import (
 // @schema http
 func main() {
 	r := initialize.Run()
-	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
-	r.Run(":8002")
-}
 
-func Pong(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{
-		"message": "pong...ping",
-	})
+	prometheus.MustRegister(pingCounter)
+
+	r.GET("/ping/200", ping)
+	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+	r.GET("/metrics", gin.WrapH(promhttp.Handler()))
+	r.Run(":8002")
 }

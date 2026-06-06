@@ -1,3 +1,9 @@
 docs
 cmd/cli
 config/production.yaml
+
+# Bỏ qua toàn bộ dữ liệu của MySQL Docker
+environment/data/mysql_data/
+
+# Bỏ qua các file log phát sinh khi chạy ứng dụng
+storages/logs/*.log
