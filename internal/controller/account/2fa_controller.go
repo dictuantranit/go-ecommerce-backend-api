@@ -35,7 +35,8 @@ func (sUser2FA) SetupTwoFactorAuth(ctx *gin.Context) {
 	// get UserId from uuid (token)
 	userId, err := context.GetUserIdFromUUID(ctx.Request.Context())
 	if err != nil {
-		response.ErrorResponse(ctx, response.ErrCodeTwoFactorAuthSetupFailed, "UserId is not invalid")
+		//response.ErrorResponse(ctx, response.ErrCodeTwoFactorAuthSetupFailed, "UserId is not invalid")
+		response.ErrorResponse(ctx, response.ErrCodeTwoFactorAuthSetupFailed, err.Error())
 	}
 
 	log.Println("UserId: ", userId)
@@ -70,7 +71,8 @@ func (sUser2FA) VerifyTwoFactorAuth(ctx *gin.Context) {
 	// get UserId from uuid (token)
 	userId, err := context.GetUserIdFromUUID(ctx.Request.Context())
 	if err != nil {
-		response.ErrorResponse(ctx, response.ErrCodeTwoFactorAuthVerifyFailed, "UserId is not invalid")
+		response.ErrorResponse(ctx, response.ErrCodeTwoFactorAuthVerifyFailed, err.Error())
+		//response.ErrorResponse(ctx, response.ErrCodeTwoFactorAuthVerifyFailed, "UserId is not invalid")
 		return
 	}
 	log.Println("UserId: ", userId)

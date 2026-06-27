@@ -13,7 +13,7 @@ type InfoUserUUID struct {
 }
 
 func getSubjectUUID(ctx context.Context) (string, error) {
-	sUUID, ok := ctx.Value("subj").(string)
+	sUUID, ok := ctx.Value("subjectUUID").(string)
 	if !ok {
 		return "", errors.New("failed to get subject UUID")
 	}

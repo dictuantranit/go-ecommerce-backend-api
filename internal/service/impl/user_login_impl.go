@@ -128,9 +128,12 @@ func (s *sUserLogin) Login(ctx context.Context, in *model.LoginInput) (codeResul
 		return response.ErrCodeAuthFailed, out, fmt.Errorf("does not match password")
 	}
 	if isTwoFactorEnable > 0 {
+
+		log.Println("isTwoFactorEnable > 0")
+
 		// send otp to in.TwoFactorEmail
 		keyUserLoginTwoFactor := crypto.GetHash("2fa:otp:" + strconv.Itoa(int(userBase.UserID)))
-		err = global.Rdb.SetEx(ctx, keyUserLoginTwoFactor, "111111", time.Duration(consts.TIME_OTP_REGISTER)*time.Minute).Err()
+		err = global.Rdb.SetEx(ctx, keyUserLoginTwoFactor, "111111", time.Duration(consts.TIME_2FA_OTP_REGISTER)*time.Minute).Err()
 		if err != nil {
 			return response.ErrCodeAuthFailed, out, fmt.Errorf("set otp redis failed")
 		}
@@ -150,6 +153,8 @@ func (s *sUserLogin) Login(ctx context.Context, in *model.LoginInput) (codeResul
 		out.Message = "send OTP 2FA to Email, pls get OTP by Email..."
 		return response.ErrCodeSuccess, out, nil
 	}
+
+	log.Printf("isTwoFactorEnable %d", isTwoFactorEnable)
 
 	// 4. update password time
 	go s.r.LoginUserBase(ctx, database.LoginUserBaseParams{
